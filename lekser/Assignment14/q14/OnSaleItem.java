@@ -1,5 +1,6 @@
 package Assignment14.q14;
 
+
 /**
  * SubClass of Item
  */
@@ -21,26 +22,34 @@ public class OnSaleItem extends Item {
      * - it will assign the price after deducting(minus) discount from the price
      * - assigns discount
      */
-    public OnSaleItem(String name,int quantity,int catalogNumber,double price, double discount) {
-      super(name, quantity, catalogNumber, price);
-    }
-
+    
     /**
      * getter for discount
      * @return
      */
-    public double getDiscount() {
-      //TODO
-        return 0.0;
-    }
+   
 
-    /**
+    public OnSaleItem(String name, int catalogNumber, int quantity, double price) {
+		super(name, catalogNumber, quantity, price);
+		// TODO Auto-generated constructor stub
+	}
+
+	public double getDiscount() {
+		return discount;
+	}
+
+	/**
      * setter for discount
      * @param discount
      */
-    public void setDiscount(double discount) {
-       
-    }
+	public void setDiscount(double discount) {
+		this.discount = discount;
+	}
+
+	@Override
+	public String toString() {
+		return "OnSaleItem [discount=" + discount + ", getName()=" + getName() + ", getPrice()=" + getPrice() + "]";
+	}
 
     /**
      * overrides toString from Item:
@@ -49,8 +58,5 @@ public class OnSaleItem extends Item {
      *      * "OnSaleItem{discount=20.0%, name=ItemName, price=100.45}"
      *
      */
-    @Override
-    public String toString() {
-        return "";
+    
     }
-}

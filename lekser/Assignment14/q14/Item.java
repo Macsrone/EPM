@@ -9,7 +9,15 @@ public class Item {
     private int quantity;
     private double price;
 
-    /**
+    public Item(String name, int catalogNumber, int quantity, double price) {
+		super();
+		this.name = name;
+		this.catalogNumber = catalogNumber;
+		this.quantity = quantity;
+		this.price = price;
+	}
+
+	/**
      * public constructor with:
      * @param name
      * @param quantity
@@ -18,77 +26,51 @@ public class Item {
      *
      * assigns to values to instance variables
      */
-    public Item(String name,int quantity,int catalogNumber, double price)
-    {
-      
-      
-      
-    }
+   
 
-    /**
-     * setter for name instance variable
-     * @param name
-     */
     public void setName(String name) {
-       
-    }
+		this.name = name;
+	}
 
-    /**
-     * setter for private price
-     * @param price
-     */
-    public void setPrice(double price) {
-       
-    }
+	public void setCatalogNumber(int catalogNumber) {
+		this.catalogNumber = catalogNumber;
+	}
 
-    /**
-     * getter for price
-     * @return
-     */
-    public double getPrice() {
-        
-        return 0.0;
-    }
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 
-    /**
-     * getter for name
-     * @return
-     */
-    public String getName(){
-      
-      
-        return null;
-    }
+	public void setPrice(double price) {
+		this.price = price;
+	}
 
+	public String getName() {
+		return name;
+	}
 
-    public int getQuantity(){
-       //TODO
-        return -1;
+	public int getCatalogNumber() {
+		return catalogNumber;
+	}
 
-    }
-    public void setQuantity(int quantity){
-         //TODO
+	public int getQuantity() {
+		return quantity;
+	}
 
-    }
+	public double getPrice() {
+		return price;
+	}
 
-    public int getCatalogNumber(){
-      //TODO
-        return -1;
-    }
+	@Override
+	public String toString() {
+		return "Item [name=" + name + ", catalogNumber=" + catalogNumber + ", quantity=" + quantity + ", price=" + price
+				+ "]";
+	}
 
-    public void setCatalogNumber(int catalogNumber) {
-       
-       
-    }
-
-    /**
+	/**
      * Override toString:
      * @returns Object description in this format:
      * "Regular Item{name='Item name', catalogNumber=1234, quantity=5, price=9.99}"
      */
-    @Override
-    public String toString() {
-        return "";
-    }
+    
   
 }

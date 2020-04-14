@@ -20,26 +20,28 @@ public class TJMaxx {
      * Public no-args constructor - Instantiates regularItems and onSaleItems lists
      * as new ArrayList
      */
-    public TJMaxx() {
-        //TODO
-        
-    }
-
+    public TJMaxx(List<Item> regularItems, List<OnSaleItem> onSaleItems) {
+		super();
+		this.regularItems = regularItems;
+		this.onSaleItems = onSaleItems;
+	}
     /**
      * adds an item object to regularItems list
      * @param item
      */
     public void addRegularItem(Item item) {
-       
+       regularItems.add(item);
        
     }
 
-    /**
+    
+
+	/**
      * adds OnSaleItem object to onSaleItems list
      * @param item
      */
-    public void addOnSaleItem(OnSaleItem item) {
-        
+    public void addOnSaleItem(OnSaleItem item) { 
+        onSaleItems.add(item);
         
     }
 
@@ -48,20 +50,27 @@ public class TJMaxx {
      * @return
      */
     public List<Item> getRegularItems() {
-        //TODO change from null 
-        return null;
-    }
+		return regularItems;
+	}
+    
 
     /**
      * getter for onSaleItems
      * @return
      */
+    
     public List<OnSaleItem> getOnSaleItems() {
-         //TODO change from null 
-        return null;
-    }
-
-    /**
+		return onSaleItems;
+	}
+   
+	public void setRegularItems(List<Item> regularItems) {
+		this.regularItems = regularItems;
+	}
+	
+	public void setOnSaleItems(List<OnSaleItem> onSaleItems) {
+		this.onSaleItems = onSaleItems;
+	}
+	/**
      * return count of regularItem object
      * @return
      */
