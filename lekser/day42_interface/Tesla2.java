@@ -1,9 +1,9 @@
 package day42_interface;
 
-public class Tesla2 extends Vehicle implements Electric, SelfDriving {
+public class Tesla2 extends Vehicle implements Electric,SelfDriving {
 
 	@Override
-	public void selfDriver() {
+	public void selfDrive() {
 		// TODO Auto-generated method stub
 		
 	}
@@ -19,9 +19,7 @@ public class Tesla2 extends Vehicle implements Electric, SelfDriving {
 		// TODO Auto-generated method stub
 		
 	}
-
 	
-
 	
 
 }
